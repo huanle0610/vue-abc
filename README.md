@@ -1,5 +1,7 @@
 # vue-abc
 
+[![CircleCI](https://circleci.com/gh/huanle0610/vue-abc/tree/master.svg?style=svg)](https://circleci.com/gh/huanle0610/vue-abc/tree/master)
+
 > demostrate key features about vue
 
 ## Build Setup
