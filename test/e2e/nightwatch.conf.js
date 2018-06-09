@@ -43,15 +43,12 @@ module.exports = {
       }
     },
 
-    phantomjs: {
-      desiredCapabilities : {
-        browserName : "phantomjs",
-        javascriptEnabled : true,
-        acceptSslCerts : true,
-        chromeOptions: { args: [ 'headless', 'no-sandbox'] },
-        "phantomjs.binary.path" : "node_modules/phantomjs-prebuilt/bin/phantomjs",
-        "phantomjs.cli.args" : ["--ignore-ssl-errors=true"],
-        "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"
+    chromeheadless: {
+      desiredCapabilities: {
+        browserName: 'chrome',
+        javascriptEnabled: true,
+        acceptSslCerts: true,
+        chromeOptions: { args: [ 'headless', 'no-sandbox'] }
       }
     }
   }

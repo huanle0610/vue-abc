@@ -13,7 +13,7 @@ module.exports = {
       .waitForElementVisible('#app', 2000)
       .assert.elementPresent('.hello')
       .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
+      .assert.elementCount('img', 0)
       .end();
   },
 };
