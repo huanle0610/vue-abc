@@ -30,3 +30,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+[e2e more](https://sites.google.com/a/chromium.org/chromedriver/capabilities)
+[e2e more2](https://peter.sh/experiments/chromium-command-line-switches/)
