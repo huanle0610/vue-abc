@@ -1,8 +1,8 @@
 <template>
   <img
     height="155px"
-    @click="inverse"
     :src="`static/cards/${display ? card : 'back'}.svg`"
+    @click="inverse"
   >
 </template>
 <script>

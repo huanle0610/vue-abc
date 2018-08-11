@@ -40,8 +40,8 @@ export default {
       ),
     );
 
-      // merge mapping userIDs with fromRequest's above can make up to 3 API requests
-      // since we take 5 values, the second and third request are cancelled.
+    // merge mapping userIDs with fromRequest's above can make up to 3 API requests
+    // since we take 5 values, the second and third request are cancelled.
     result.pipe(take(5)).subscribe(
       x => console.log(x),
       err => console.error('error:', err),

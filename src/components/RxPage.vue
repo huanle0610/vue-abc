@@ -3,7 +3,8 @@
     <ul>
       <li
         v-for="(person,index) in people$"
-        :key="index"> {{ person }}
+        :key="index"
+      > {{ person }}
       </li>
     </ul>
     <div>
@@ -19,13 +20,14 @@
       <!-- you can also stream to the same subject with different events/data -->
       <button
         v-stream:click="{ subject: minus$, data: minusDelta1 }"
-        v-stream:mousemove="{ subject: minus$, data: minusDelta2 }">
+        v-stream:mousemove="{ subject: minus$, data: minusDelta2 }"
+      >
         Minus on Click &amp; Mousemove
       </button>
 
       <pre>{{ $data }}</pre>
 
-      <my-button v-stream:click="plus$"/>
+      <my-button v-stream:click="plus$" />
     </div>
   </div>
 </template>

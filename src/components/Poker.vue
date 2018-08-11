@@ -3,13 +3,18 @@
     <button @click="deal">Deal</button>
     <label
       v-for="(suit, key) in suits"
-      :key="key">
+      :key="key"
+    >
       <input
+        v-model="exclude"
         type="checkbox"
         :value="key"
-        v-model="exclude"><img
-          :src="`static/suits/${suit}.svg`"
-          width="64px"></label>
+      >
+      <img
+        :src="`static/suits/${suit}.svg`"
+        width="64px"
+      >
+    </label>
 
     <span>Total: {{ deck.length }}</span>
     <span>Show: {{ finalDeck.length }}</span>
@@ -18,10 +23,13 @@
       <li
         v-for="(card, index) in finalDeck"
         :key="card"
-        class="card">
+        class="card"
+      >
         <card
+          :amtf="1"
           :card="card"
-          :show="index%2 === 0"/>
+          :show="index%2 === 0"
+        />
       </li>
     </ul>
   </div>
@@ -43,18 +51,18 @@ export default {
       deck: [],
     };
   },
+  computed: {
+    finalDeck() {
+      const vm = this;
+      return vm.deck.filter(d => !vm.exclude.includes(d.substr(-1).toLowerCase()));
+    },
+  },
   created() {
     this.deal();
   },
   methods: {
     deal() {
       this.deck = getDeck();
-    },
-  },
-  computed: {
-    finalDeck() {
-      const vm = this;
-      return vm.deck.filter(d => !vm.exclude.includes(d.substr(-1).toLowerCase()));
     },
   },
 }
